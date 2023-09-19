@@ -19,9 +19,7 @@ const paragrapghVariants = cva(
 
 interface ParagraphProps
   extends HTMLAttributes<HTMLParagraphElement>,
-    VariantProps<typeof paragrapghVariants> {
-  children: string;
-}
+    VariantProps<typeof paragrapghVariants> {}
 
 const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
   ({ className, size, children, ...props }, ref) => {

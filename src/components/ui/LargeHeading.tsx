@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const headingVariants = cva(
-  "text-black dark:text-white text-center lg:text-left font-extra-bold leading-tight tracking-tighter",
+  "text-black dark:text-white text-center lg:text-left font-extrabold  leading-tight tracking-tighter",
   {
     variants: {
       size: {
@@ -20,9 +20,7 @@ const headingVariants = cva(
 
 interface LargeHeadingProps
   extends HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof headingVariants> {
-  children: string;
-}
+    VariantProps<typeof headingVariants> {}
 
 const LargeHeading = forwardRef<HTMLHeadingElement, LargeHeadingProps>(
   ({ className, size, children, ...props }, ref) => {
